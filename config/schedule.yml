@@ -1,0 +1,4 @@
+monitoring_class:
+  cron: '*/1 * * * *'
+  class: 'MonitoringClassWorker'
+  queue: 'default'

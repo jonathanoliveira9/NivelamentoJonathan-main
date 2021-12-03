@@ -1,0 +1,33 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><%= t('.id') %></th>
+        <th scope="col"><%= t('.email') %></th>
+        <th scope="col"><%= t('.name') %></th>
+        <th scope="col"><%= t('.birth_date') %></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td class="">
+            #<%= student.id %>
+          </td>
+          <td class="d-flex align-items-center">
+            <%= image_tag('default.jpg', size: '25x25', class: 'rounded-circle') %>&nbsp;&nbsp;
+            <div class="text-muted">
+              <span><%= student.email %></span>
+            </div>
+          </td>
+          <td class="text-muted"><%= student.name %></td>
+          <td class="text-muted"><%= student.birth_date.strftime('%d-%m-%Y') %></td>
+          <td>
+            <%= link_to t('.unsubscribe_student'), unsubscribe_student_grades_path(id: @grade, student_id: student.id), data: { confirm: t('.unsubscribe_confirm') },class: 'btn btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

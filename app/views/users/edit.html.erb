@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card shadow" style="border-radius: 1rem;">
+        <div class="card-body text-center">
+          <div>
+            <h3 class="fw-bold text-uppercase"><%= t('.title') %></h3>
+            <%= render 'form', user: @user %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to t('.back'), users_path, { class:  'btn btn-secondary my-2' } %>

@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="p-4">
+    <h4 class="title"><%= t('.search_grade') %></h4>
+  </div>
+  <div class="p-4">
+    <%= search_form_for @q do |f| %>
+      <div class="row">
+        <div class="col-auto">
+          <%= f.label t('.code') %>
+          <%= f.text_field :code_cont, class: 'form-control' %>
+        </div>
+        <div class="col-auto">
+          <%= f.label t('.school_name') %>
+          <%= f.text_field :school_name_cont, class: 'form-control' %>
+        </div>
+        <div class="col-auto">
+          <%= f.label t('.year') %>
+          <%= f.text_field :year_cont, class: 'form-control' %>  
+        </div>
+        <div class="col-auto">
+          <br>
+          <%= button_tag type='submit', class: 'btn btn-primary',
+          data: { toggle: 'tooltip'}, title: t('.search'), 'data-placement' => 'right' do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

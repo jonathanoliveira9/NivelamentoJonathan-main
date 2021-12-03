@@ -1,0 +1,20 @@
+<div class="form-group">
+  <%= form_with model: @grade, url: add_teachers_grades_path(id: @grade), method: :post do |f| %>
+    <div class="pb-3">
+      <%= f.label t('.teachers_avaliable') %>
+      <%= f.select(:teacher_ids, @teachers.collect { |t| [t.name, t.id]},
+      {  include_blank: true }, {  multiple: "multiple", class: 'form-control select2' } ) %>
+    </div>
+    <%= button_tag type: 'submit', class: 'btn btn-primary w-100' do %>
+      <i class="fas fa-paper-plane"></i> <%= t('.inscription_teachers') %>
+    <% end %>
+  <% end %>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $(".select2").select2({
+      dropdownParent: $("#modal-generic"),
+    })
+  })
+</script>

@@ -1,0 +1,117 @@
+pt-BR:
+  activerecord:
+    models:
+      grade: Grade
+    attributes:
+      grade:
+        sunday: Domingo
+        monday: Segunda-Feira
+        tuesday: Terça-Feira
+        wednesday: Quarta-Feira
+        thursday: Quinta-Feira
+        friday: Sexta-Feira
+        saturday: Sábado
+  date:
+    order: ["day", "month", "year"]
+  grades:
+    add_teachers:
+      add_teachers_successfully: Adicionado Professor com sucesso
+    create:
+      success_created: Criado com sucesso
+    destroy:
+      success_deleted: Excluído com sucesso   
+    update:
+      success_updated: Atualizado com Sucesso
+    edit:
+      title: Editar Turma
+    new:
+      title: Nova Turma
+    form:
+      back: Voltar
+      code_grade: Código da Turma
+      sunday: Domingo
+      monday: Segunda-Feira
+      tuesday: Terça-Feira
+      wednesday: Quarta-Feira
+      thursday: Quinta-Feira
+      friday: Sexta-Feira
+      saturday: Sábado
+      weekdays: Dias da semana
+      school_name: Nome da Escola
+      year: Ano
+      hours: Horário
+      save: Salvar
+    index:
+      are_you_sure: Vocẽ tem certeza?
+      code: Código
+      delete: Deletar
+      edit: Editar
+      home: Principal
+      hours: Horário
+      new_grade: Nova Turma
+      options: Opções
+      school_name: Nome da Escola
+      show: Mostrar
+      year: Ano
+      week_day: Dias da Semana
+    search:
+      code: Código
+      school_name: Nome da Escola
+      search_grade: Pesquisar Turma
+      year: Ano
+      search: Pesquisar
+    show:
+      back: Voltar
+      inscription_teachers: Inscrever Professores
+      teachers: Professores
+      subscribe_student: Inscrever Aluno na Turma
+    inscription_teachers:
+      inscription: Inscrever Professores na Turma
+    inscription_teacher_form:
+      inscription_teachers: Inscrever Professores
+      teachers_avaliable: Professores Disponíveis
+    inscription_students:
+      add_student: Adicionar Aluno
+    unsubscribe_student:
+      unsubscribe_student: Aluno desinscrito com sucesso!
+    tab_students:
+      id: ID
+      email: Email
+      name: Nome
+      birth_date: Data de Nascimento
+      unsubscribe_student: Desinscrever Aluno
+      unsubscribe_confirm: Tem certeza que quer desinscrever o aluno?
+    subscribe_student:
+      fill_email: Preencha o Email
+      mininum_character: Minimo 5 caracteres.
+      notification_already_allocate: Este alunos já esta inscrito em outra turma no mesmo horário. Por favor inscreva outro aluno.
+      subscribe: Inscreva o Aluno
+      add_student_successfully: Aluno adicionado com sucesso
+      error_subscribe_student: Ops, algo deu errado, entre em contato com o suporte
+  welcome:
+    index:
+      allocation_resources: Alocação de Professores e Alunos em turmas
+      grades: Turmas
+      registration_resources: Cadastro de Professores e Alunos
+      users: Usuários
+  users:
+    edit:
+      title: Editar Usuário
+      back: Voltar
+    index:
+      new_user: Novo Usuário
+      home: Principal
+      show: Mostrar
+      edit: Editar
+      delete: Excluir
+      list_users: Lista de Usuários
+      are_you_sure: Você tem certeza?
+    new:
+      back: Voltar
+      title: Novo Usuário
+    create:
+      user_created: User was successfully created.
+    update:
+      user_updated: User was successfully updated.
+    destroy:
+      user_deleted: User was successfully destroyed.

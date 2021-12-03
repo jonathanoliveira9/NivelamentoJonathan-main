@@ -1,0 +1,24 @@
+<input style="display: none;"  type="text" id="grade_id" value= "<%= @grade.id %>">
+<%= form_with model: @grade, url: subscribe_student_grades_path(id: @grade), method: :post do |f| %>
+  <%= hidden_field_tag 'student_id', id: 'student_id' %>
+  <div class="form-group">
+    <%= f.label 'Email', class: 'text-muted' %>
+    <div class="d-flex align-items-center">
+      <%= text_field_tag 'email', nil, class: 'form-control', id: 'email_search', placeholder: t('.fill_email') %>
+      <div class="spinner-border float-righ" style="display: none;" >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="form-text" >
+      <small class="form-text text-danger"><%= t('.mininum_character') %></small>
+    </div>
+    <div class="form-text" id="warning-notication">
+      <small class="text-danger"><%= t('.notification_already_allocate') %></small>
+    </div>
+  </div>
+  <%= button_tag type: 'submit', class: 'btn btn-primary w-100' do %>
+    <i class="fas fa-paper-plane"></i> <%= t('.subscribe') %>
+  <% end %>
+<% end %>
+<%= javascript_include_tag 'students/subscribe_autocomplete' %>
+

@@ -1,0 +1,149 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  activerecord:
+    models:
+      grade: Grade
+    attributes:
+      grade:
+        sunday: Sunday
+        monday: Monday
+        tuesday: Tuesday
+        wednesday: Wednesday
+        thursday: Thursday
+        friday: Friday
+        saturday: Saturday
+        weekdays: Weekdays
+  date:
+    order: ["day", "month", "year"]
+  grades:
+    add_teachers:
+      add_teachers_successfully: Teacher added with successfuly
+    create:
+      success_created: Grade created successfully
+    destroy:
+      success_deleted: Grade deleted successfuly  
+    update:
+      success_updated: Grade updated successfuly
+    edit:
+      title: Edit Grade
+    new:
+      title: New Grade
+    form:
+      back: Back
+      code_grade: Code Grade
+      sunday: Sunday
+      monday: Monday
+      tuesday: Tuesday
+      wednesday: Wednesday
+      thursday: Thursday
+      friday: Friday
+      saturday: Saturday
+      weekdays: Weekdays
+      school_name: School Name
+      year: Year
+      hours: Hours
+      save: Save
+    index:
+      are_you_sure: Are you sure?
+      code: Code
+      delete: Delete
+      edit: Edit
+      home: Home
+      hours: Hours
+      new_grade: New Grade
+      options: Options
+      school_name: School Name
+      show: Show
+      year: Year
+      week_day: Week Day
+    search:
+      code: Code
+      school_name: School Name
+      search_grade: Search
+      year: Year
+      search: Search
+    show:
+      back: Back
+      inscription_teachers: Inscription Teachers
+      teachers: Teachers
+      subscribe_student: Subscribe Teachers
+    inscription_teachers:
+      inscription: Inscription Teachers
+    inscription_teacher_form:
+      inscription_teachers: Inscription Teachers
+      teachers_avaliable: Teachers Avaliable
+    inscription_students:
+      add_student: Add Student
+    unsubscribe_student:
+      unsubscribe_student: Unsubscribe Student!
+    tab_students:
+      id: ID
+      email: Email
+      name: Name
+      birth_date: Birth Date
+      unsubscribe_student: Unsubscribe Student
+      unsubscribe_confirm: Are you sure?
+    subscribe_student:
+      fill_email: Fill Email
+      mininum_character: Minimum 5 characters.
+      notification_already_allocate: This students already subscribe at same hour in other class. Please subscribe other student.
+      subscribe: Subscribe Student
+      add_student_successfully: Student added with successfuly
+      error_subscribe_student: Ops, something is wrong, please contact the support
+  welcome:
+    index:
+      allocation_resources: Allocation Teachers and Students to Grade
+      grades: Grades
+      registration_resources: Registration Teachers and Students
+      users: Users
+  users:
+    edit:
+      title: Edit User
+      back: Back
+    index:
+      new_user: New User
+      home: Home
+      show: Show
+      edit: Edit
+      delete: Delete
+      list_users: List Users
+      are_you_sure: Are you sure?
+    new:
+      back: Back
+      title: New User
+    create:
+      user_created: User was successfully created.
+    update:
+      user_updated: User was successfully updated.
+    destroy:
+      user_deleted: User was successfully destroyed.

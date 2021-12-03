@@ -1,0 +1,75 @@
+<div>
+  <h3><i class="fas fa-bookmark"></i> <%= @grade.code %></h3>
+</div>
+<hr>
+<div class="row">
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="p-2">
+        <div class="row">
+          <div class="d-flex justify-content-between">
+            <div class="title">
+              <i class="fas fa-chalkboard-teacher"></i> <%= t('.teachers')%></div>
+            <div class="float-right">
+              <%= link_to inscription_teachers_grade_path(@grade), remote: true,
+                          class: 'btn btn-primary', data: { toggle: 'tooltip' },
+                          title: t('.inscription_teachers'), 'data-placement' => 'right' do %>
+                <i class="fas fa-users-cog"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <% @teachers.each do |teacher| %>
+        <div class="d-flex justify-content-between pb-2">
+          <div class="text-muted">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle" width="25">
+            &nbsp;&nbsp;<%= teacher.name %>
+          </div>
+          <div class="float-right">
+            <span class="text-muted"><i class="fas fa-envelope"></i> <%= teacher.email %></span>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card shadow">
+      <div class="p-2">
+        <div class="title text-muted"><i class="fas fa-map-marker-alt"></i> <%= @grade.school_name %></div>
+        <hr>
+        <div>
+          <i class="far fa-calendar-alt text-muted" ></i>
+          <span class="text-muted"><%= @grade.year %></span>
+        </div>
+        <div class="text-muted">
+          <%= @grade.weekday_text.join(' - ') %>
+        </div>
+        <div class="text-muted">
+          <i class="far fa-clock "></i>
+          <%= @grade.hour_start %> - <%= @grade.hour_end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 py-3">
+    <div class="pb-4">
+      <%= link_to inscription_students_grade_path(@grade), remote: true,
+                  class: 'btn btn-primary', data: { toggle: 'tooltip' },
+                  title: t('.subscribe_student'), 'data-placement' => 'right' do %>
+                  <i class="far fa-paper-plane"></i>
+      <% end %>
+    </div>
+    <%= render 'tab_students' %>
+    <div class="pagination pagination-sm justify-content-center">
+      <%= pagy_bootstrap_nav(@pagy).html_safe %>
+    </div>
+    <div>
+      <%= link_to t('.back'), grades_path, class: "btn btn-secondary my-2" %>
+    </div>
+  </div>
+</div>
+
+<%= render 'utils/generic_modal' %>

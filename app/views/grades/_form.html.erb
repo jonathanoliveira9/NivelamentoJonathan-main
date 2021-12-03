@@ -1,0 +1,72 @@
+<%= form_with model: @grade do |f| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-4">
+          <%= f.label t('.code_grade'), class: 'form-label' %>
+          <%= f.text_field :code, class: 'form-control', required: true, placeholder: 'Code' %>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="mb-4">
+              <%= f.label t('.weekdays'), class: 'form-check-label' %>  
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :sunday, class: 'form-check-input' %>
+              <%= f.label t('.sunday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :monday, class: 'form-check-input' %>
+              <%= f.label t('.monday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :tuesday, class: 'form-check-input' %>
+              <%= f.label t('.tuesday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :wednesday, class: 'form-check-input' %>
+              <%= f.label t('.wednesday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :thursday, class: 'form-check-input' %>
+              <%= f.label t('.thursday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :friday, class: 'form-check-input' %>
+              <%= f.label t('.friday'), class: 'form-check-label' %>
+            </div>
+            <div class="form-check form-switch">
+              <%= f.check_box :saturday, class: 'form-check-input' %>
+              <%= f.label t('.saturday'), class: 'form-check-label' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-4">
+          <%= f.label t('.school_name'), class: 'form-label' %>
+          <%= f.text_field :school_name, required: true, class: 'form-control', placeholder: 'Code' %>
+        </div>
+        <div>
+        <div class="mb-4">
+          <%= f.label t('.year'), class: 'form-label' %>
+          <%= f.select(:year, Date.today.year..(Date.today.year+10), { selected: Time.current.year }, { class: 'form-control' })  %>
+        </div>
+        <div>
+          <%= f.label t('.hours'), class: 'form-label' %>
+          <div class="input-group mb-3">
+            <%= f.time_field :hour_start, value: @grade.hour_start, required: true, class: 'form-control' %>
+            <span class="input-group-text">at</span>
+            <%= f.time_field :hour_end, value: @grade.hour_end, required: true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-4">
+      <%= link_to t('.back'), grades_path, class: "btn btn-sm btn-secondary" %>
+      <%= button_tag type: 'submit', class: "btn btn-sm btn-success" do %>
+        <i class="fas fa-check"></i> <%= t('.save') %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
