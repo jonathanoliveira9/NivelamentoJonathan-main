@@ -23,7 +23,7 @@ rvm  install ruby-2.5.9 # caso utilize rvm
 ruby.
 
 ~~~shell
-gem install bunlder && bundler install
+gem install bundler && bundler install
 ~~~
 
 3. Prepare o banco de dados
